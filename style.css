@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap');
+:root{
+    --bgColor--: #000C66;
+    --containerColor-- : #201f28;
+    --searchBtnColor-- : #ffb92a;
+    --fontColor--: #fff;
+    --inputRadius--: 10px;
+    --defaultCursor-- : default;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: var(--bgColor--);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: auto;
+    
+}
+.container{
+    background: var(--containerColor--);
+    height: auto;
+    width: 500px;
+    padding: 15px 20px;
+    border-radius: var(--inputRadius--);
+}
+
+/*Seacrh Field*/
+.searchField{
+    display: flex;
+    justify-content: center;
+    margin-top: var(--inputRadius--);
+}
+.searchField input,
+.searchField.button{
+    font-size: .9em;
+    outline: none;
+    margin: 0px 20px;
+}
+.searchField input{
+    width: 70%;
+    background: transparent;
+    border: solid 1px var(--fontColor--);
+    color: var(--fontColor--);
+    padding: .5em;
+    border-radius: var(--inputRadius--);
+}
+.searchField input::placeholder{font-size: 15px;}
+.searchField input:focus{border-color: var(--fontColor--);}
+.searchField button{
+    width: 20%;
+    border-radius: var(--inputRadius--);
+    background: var(--searchBtnColor--);
+    border: none;
+    cursor: pointer;
+}
+.searchField button:hover{
+    background: var(--bgColor--);
+    color: var(--fontColor--);
+    transition: .2s;
+}
+
+/*resultField*/
+.resultField{
+    display: flex;
+    margin-top:20px;
+    padding-left: 25px;
+    color: var(--fontColor--);
+}
+.resultField img{height: 200px;}
+/*Title*/
+.title{margin: 0px 0px 0px 20px;cursor: var(--defaultCursor--);}
+.title h1,.ratings{margin-left: 40px;}
+
+/*ratings*/
+.ratings{
+    display: flex;
+    justify-content: center;
+    margin-top: .2em;
+    align-items: center;
+}
+.ratings i{color: var(--searchBtnColor--);font-size: 13px;}
+.ratings i,.ratings p{margin: 0px .1em;}
+/*date*/
+.date{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-left: 40px;
+    font-size: 13px;
+    cursor: var(--defaultCursor--);
+}
+/*genre*/
+.genre{
+    display: flex;
+    margin-top: 30px;   
+    margin-left: 25px;
+    cursor: var(--defaultCursor--);
+}
+.genre p{
+    border:  1px solid var(--fontColor--);
+    font-size: 13px;
+    padding: 7px;
+    margin: 0px 10px;
+}
+
+/*Story*/
+.story{
+    color: var(--fontColor--);
+    margin-top: 15px;
+    margin-left: 25px;
+}
+.plot p, .cast p{
+    opacity: .5;
+    font-size: 12px;
+    margin: 5px 0px; 
+}
+
+
+
+
+
+
+
+
+
+
