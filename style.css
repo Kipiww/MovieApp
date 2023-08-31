@@ -27,10 +27,11 @@ body{
 }
 .container{
     background: var(--containerColor--);
-    height: auto;
-    width: auto;
+    height: 500px;
+    width: 600px;
     padding: 15px 20px;
     border-radius: var(--inputRadius--);
+    padding: .9em;
 }
 
 /*Seacrh Field*/
@@ -56,7 +57,7 @@ body{
 .searchField input::placeholder{font-size: 15px;}
 .searchField input:focus{border-color: var(--fontColor--);}
 .searchField button{
-    width: 10%;
+    width: 20%;
     border-radius: var(--inputRadius--);
     background: var(--searchBtnColor--);
     border: none;
@@ -68,61 +69,133 @@ body{
     transition: .2s;
 }
 
-/*resultField*/
-.resultField{
-    display: flex;
-    margin-top:20px;
-    padding-left: 25px;
-    color: var(--fontColor--);
-}
-.resultField img{height: 200px;}
-/*Title*/
-.title{margin: 0px 0px 0px 20px;cursor: var(--defaultCursor--);}
-.title h1,.ratings{margin-left: 40px;}
+/*ResultField*/
 
-/*ratings*/
-.ratings{
-    display: flex;
-    justify-content: center;
-    margin-top: .2em;
-    align-items: center;
-}
-.ratings i{color: var(--searchBtnColor--);font-size: 13px;}
-.ratings i,.ratings p{margin: 0px .1em;}
+.resultField{margin: 30px;color: #fff;cursor: default ;}
+.imgDef{height: 200px;}
+.info{display: flex;} 
+.title{margin: 0px 10px;}
+.title h1{margin-left: 90px;letter-spacing: 0.3px;}
+
+/*Ratings*/
+.ratings{display: flex;justify-content: center; margin-top: var(--inputRadius--);}
+.ratings i{color: #ffb92a;text-align: center;}g
+.ratings i, .ratings p{margin: 0px 3px;font-size: 13px;}
+
 /*date*/
-.date{
-    display: flex;
-    justify-content: space-around;
-    margin-top: 10px;
-    margin-left: 40px;
-    font-size: 13px;
-    cursor: var(--defaultCursor--);
+.date{display: flex;margin-top: 15px;justify-content: center;margin-left: 30px;}
+.date p{margin: 0px 12px;font-size: 14px;}
+
+/*Genre*/
+.genre{justify-content: center;display: flex;margin-top: 14px;margin-left: 20px;}
+.genre p{margin: 0px 17px; border: #fff solid 1px;font-size: 13px;padding: .6em;}
+
+/*moreInfo*/
+.moreInfo{margin-top: 20px;}
+.moreInfo h3{font-size: 20px;}
+.moreInfo p{font-size: 12px;opacity: .5;}
+
+/*plot*/
+.plot{margin-bottom: 10px;}
+
+/*Reponsive Website*/
+@media(width < 600px) {
+    .container{
+        width: 500px;
+    }
+    /*resulField*/
+    .title {position: relative;right: 1em;}
+    .title h1{margin-right: 20px;font-size: 19px;}
+    .ratings{font-size: 12px;}
+    .date p{font-size: 13px;}
+    .genre p{font-size: 12px;margin: 0px 15px;}
 }
-/*genre*/
-.genre{
-    display: flex;
-    margin-top: 30px;   
-    margin-left: 25px;
-    cursor: var(--defaultCursor--);
+@media(width < 500px) {
+    .container{
+        width: 400px;
+        height: 600px;
+        padding: 10px 15px;
+    }
+/*inputField*/
+    .searchField input,
+    .searchField.button{font-size: 13px;outline: none;margin: 0px 20px;}
+    .searchField input::placeholder{font-size: 13px;}
+    .searchField button{font-size: 12px;}
+/*resulField*/
+    .resultField{margin-right:20px;}
+    .imgDef{height: 150px;position: relative;right: 30px;}
+    .title {position: relative;right: 2.5em;}
+    .title h1{margin-right: 20px;font-size: 17px;}
+    .ratings{font-size: 10px;}
+    .date p{font-size: 11px;}
+    .genre p{font-size: 10px;margin: 0px 15px;padding: .5em;}
+    .moreInfo{margin-top: 75px;}
+    .moreInfo h3{font-size: 19px;}
 }
-.genre p{
-    border:  1px solid var(--fontColor--);
-    font-size: 13px;
-    padding: 7px;
-    margin: 0px 10px;
+@media(width < 400px) {
+    body{
+        background: none;
+    }
+    .container{
+        width: 100%;
+        height: 100%;
+        padding: 5px 8px;
+        border-radius: 0px;
+        background-size: cover;
+    }
+/*inputField*/
+    .searchField input,
+    .searchField.button{font-size: 13px;outline: none;margin: 0px 20px;}
+    .searchField input::placeholder{font-size: 13px;}
+    .searchField button{font-size: 12px;}
+/*resulField*/
+    .resultField{margin-right:20px;}
+    .imgDef{height: 120px;position: relative;right: 30px;}
+    .title {position: relative;right: 2.5em;}
+    .title h1{margin-right: 20px;font-size: 15px;}
+    .ratings{font-size: 10px;}
+    .date p{font-size: 10px;}
+    .genre p{font-size: 10px;margin: 0px 12px;padding: .4em;}
+    .moreInfo{margin-top: 75px;}
+    .moreInfo h3{font-size: 17px;}
+}
+@media(width < 300px) {
+    body{
+        background: none;
+        padding: 0;
+    }
+    .container{
+        width: 301px;
+        height: 640px;
+        padding: 5px ;
+        border-radius: 0px;
+        background-size: cover;
+        box-sizing: border-box;
+        
+    }
+/*inputField*/
+    .searchField{margin-top: 20px;}
+    .searchField input,
+    .searchField.button{font-size: 13px;outline: none;margin: 0px 20px;}
+    .searchField input::placeholder{font-size: 10px;}
+    .searchField button{font-size: 10px;}
+/*resulField*/
+    
+    .resultField{margin-right:20px;margin-top: 70px;}
+    .imgDef{height: 120px;position: relative;right: 10px;}
+    .title {position: relative;right: 2.5em;}
+    .title h1{margin-right: 50px;font-size: 12px;width: 100px;}
+    .ratings{font-size: 8px;}
+    .date p{font-size: 8px;}
+    .genre p{font-size: 8px;margin: 0px 10px;padding: .4em;}
+    .moreInfo{margin-top: 75px;}
+    .moreInfo h3{font-size: 12px;}
+    .moreInfo p{font-size: 10px;}
 }
 
-/*Story*/
-.story{
-    color: var(--fontColor--);
-    margin-top: 15px;
-    margin-left: 25px;
-}
-.plot p, .cast p{
-    opacity: .5;
-    font-size: 12px;
-    margin: 5px 0px; 
-}
+
+
+
 
 
 
